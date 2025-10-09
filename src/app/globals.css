@@ -1,9 +1,7 @@
-@tailwind base;
+@tailwind preflight;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-black text-white;
-    overflow: hidden; /* ეს კრძალავს ნებისმიერ სქროლს */
-  }
+body {
+  @apply bg-black text-white;
+  overflow: hidden;
 }
