@@ -1,2 +1,8 @@
 @tailwind preflight;
 @tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+  overflow: hidden; /* ეს კრძალავს სქროლს და ასწორებს დიზაინს */
+}
