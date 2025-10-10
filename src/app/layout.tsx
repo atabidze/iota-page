@@ -11,7 +11,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <VideoBackground />
         <Header />
-        {children}
+        <div className="relative z-0 isolate">
+          {children}
+        </div>
       </body>
     </html>
   );

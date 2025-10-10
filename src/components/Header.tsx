@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-sm">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-white">IOTA</Link>
         <ul className="flex space-x-6">
