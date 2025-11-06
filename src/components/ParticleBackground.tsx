@@ -19,7 +19,7 @@ const ParticleBackground = () => {
         () => ({
             background: {
                 color: {
-                    value: "#000000", // ფონის ფერი
+                    value: "#000000", 
                 },
             },
             fpsLimit: 60,
@@ -29,7 +29,9 @@ const ParticleBackground = () => {
                         enable: true,
                         mode: "grab",
                     },
-                    resize: true,
+                    resize: { // <--- ეს არის შესწორება
+                        enable: true
+                    },
                 },
                 modes: {
                     grab: {
@@ -42,10 +44,10 @@ const ParticleBackground = () => {
             },
             particles: {
                 color: {
-                    value: "#3f92d7", // წერტილების ფერი
+                    value: "#3f92d7", 
                 },
                 links: {
-                    color: "#3f92d7", // ხაზების ფერი
+                    color: "#3f92d7", 
                     distance: 150,
                     enable: true,
                     opacity: 0.5,
@@ -65,7 +67,7 @@ const ParticleBackground = () => {
                     density: {
                         enable: true,
                     },
-                    value: 80, // წერტილების რაოდენობა
+                    value: 80, 
                 },
                 opacity: {
                     value: 0.5,
