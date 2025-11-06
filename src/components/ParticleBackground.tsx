@@ -15,12 +15,12 @@ const ParticleBackground = () => {
         });
     }, []);
 
-    // ეს არის განახლებული კონფიგურაცია
+    // ეს არის ახალი, გაუმჯობესებული კონფიგურაცია
     const options: RecursivePartial<IOptions> = useMemo(
         () => ({
             background: {
                 color: {
-                    value: "#000000", // შავი ფონი
+                    value: "#000", // შავი ფონი
                 },
             },
             fpsLimit: 60,
@@ -28,17 +28,20 @@ const ParticleBackground = () => {
                 events: {
                     onHover: {
                         enable: true,
-                        mode: "repulse", // მაუსის მიახლოებისას "განიზიდება"
+                        mode: "grab", // მაუსის მიახლოებისას "დაიჭერს" ხაზებს
                     },
                     resize: {
                         enable: true
                     },
                 },
                 modes: {
-                    repulse: { // "განზიდვის" პარამეტრები
-                        distance: 100,
-                        duration: 0.4,
-                    },
+                    grab: {
+                        distance: 150, // "დაჭერის" დისტანცია
+                        links: {
+                            opacity: 1,
+                            color: "#ffffff"
+                        }
+                    }
                 },
             },
             particles: {
@@ -58,24 +61,24 @@ const ParticleBackground = () => {
                     outModes: {
                         default: "bounce",
                     },
-                    random: false,
-                    speed: 0.2, // ძალიან ნელი მოძრაობა
+                    random: true, // მოძრაობა რანდომულია
+                    speed: 0.5, // ოდნავ ნელი მოძრაობა
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
                     },
-                    value: 100, // მეტი წერტილი
+                    value: 120, // მეტი წერტილი, რომ ბადე მკვრივი იყოს
                 },
                 opacity: {
-                    value: 0.5, // წერტილების გამჭვირვალობა
+                    value: 0.5,
                 },
                 shape: {
                     type: "circle",
                 },
                 size: {
-                    value: { min: 1, max: 2 }, // პატარა წერტილები
+                    value: { min: 1, max: 3 },
                 },
             },
             detectRetina: true,
