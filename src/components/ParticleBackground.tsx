@@ -15,11 +15,12 @@ const ParticleBackground = () => {
         });
     }, []);
 
+    // ეს არის განახლებული კონფიგურაცია
     const options: RecursivePartial<IOptions> = useMemo(
         () => ({
             background: {
                 color: {
-                    value: "#000000", 
+                    value: "#000000", // შავი ფონი
                 },
             },
             fpsLimit: 60,
@@ -27,30 +28,28 @@ const ParticleBackground = () => {
                 events: {
                     onHover: {
                         enable: true,
-                        mode: "grab",
+                        mode: "repulse", // მაუსის მიახლოებისას "განიზიდება"
                     },
-                    resize: { // <--- ეს არის შესწორება
+                    resize: {
                         enable: true
                     },
                 },
                 modes: {
-                    grab: {
-                        distance: 140,
-                        links: {
-                            opacity: 1,
-                        },
+                    repulse: { // "განზიდვის" პარამეტრები
+                        distance: 100,
+                        duration: 0.4,
                     },
                 },
             },
             particles: {
                 color: {
-                    value: "#3f92d7", 
+                    value: "#ffffff", // თეთრი წერტილები
                 },
                 links: {
-                    color: "#3f92d7", 
+                    color: "#ffffff", // თეთრი ხაზები
                     distance: 150,
                     enable: true,
-                    opacity: 0.5,
+                    opacity: 0.4, // ხაზების გამჭვირვალობა
                     width: 1,
                 },
                 move: {
@@ -60,23 +59,23 @@ const ParticleBackground = () => {
                         default: "bounce",
                     },
                     random: false,
-                    speed: 1,
+                    speed: 0.2, // ძალიან ნელი მოძრაობა
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
                     },
-                    value: 80, 
+                    value: 100, // მეტი წერტილი
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.5, // წერტილების გამჭვირვალობა
                 },
                 shape: {
                     type: "circle",
                 },
                 size: {
-                    value: { min: 1, max: 3 },
+                    value: { min: 1, max: 2 }, // პატარა წერტილები
                 },
             },
             detectRetina: true,
