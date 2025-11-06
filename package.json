@@ -8,13 +8,13 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "next": "14.2.3",
-    "react-tsparticles": "latest",
-    "tsparticles-slim": "latest"
-  },
+"dependencies": {
+  "react": "18.3.1",
+  "react-dom": "18.3.1",
+  "next": "14.2.3",
+  "@tsparticles/react": "latest",
+  "@tsparticles/slim": "latest"
+},
   "devDependencies": {
     "typescript": "5.4.5",
     "@types/node": "20.12.12",
