@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import VideoBackground from "@/components/VideoBackground";
 import Header from "@/components/Header";
 
 export const metadata = { title: "IOTA" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ka">
+    <html lang="ka" style={{scrollBehavior:'smooth'}}>
       <body>
-        <VideoBackground />
         <Header />
-        <div className="relative z-0 isolate">
+        <div className="relative isolate">
           {children}
         </div>
       </body>

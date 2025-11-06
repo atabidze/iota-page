@@ -7,9 +7,10 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-white">IOTA</Link>
         <ul className="flex space-x-6">
-          <li><Link href="#" className="hover:text-gray-300">Home</Link></li>
-          <li><Link href="#" className="hover:text-gray-300">Services</Link></li>
-          <li><Link href="#" className="hover:text-gray-300">Contact</Link></li>
+          <li><Link href="/" className="hover:text-gray-300">Home</Link></li>
+          {/* აქ არის ცვლილება: href="/services" */}
+          <li><Link href="/services" className="hover:text-gray-300">Services</Link></li>
+          <li><Link href="#contact" className="hover:text-gray-300">Contact</Link></li>
         </ul>
       </nav>
     </header>
